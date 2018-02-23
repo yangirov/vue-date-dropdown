@@ -19,10 +19,31 @@ npm install vue-date-dropdown --save
 ```js
 import DateDropdown from 'vue-date-dropdown'
 
+export default {
+  ...
+  components: {
+    DateDropdown
+  },
+  ...
+}
+```
+Or if you are using CDN version
+
+```js
+<script src="vue-date-dropdown.min.js"></script>
+
+<script>
 Vue.use(DateDropdown)
+
+new Vue({
+	...
+});
+<script>
 ```
 
 ## Examples
+
+See the demo in the [example](https://github.com/yangirov/vue-date-dropdown/tree/master/example) folder.
 
 Setting a default date
 
