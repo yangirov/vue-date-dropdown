@@ -1,6 +1,6 @@
 {
   "name": "vue-date-dropdown",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Vue date dropdown component",
   "main": "dist/vue-date-dropdown.js",
   "scripts": {
