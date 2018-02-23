@@ -14,6 +14,8 @@
 
 ```bash
 npm install vue-date-dropdown --save
+
+yarn add vue-date-dropdown
 ```
 
 ```js
@@ -24,6 +26,12 @@ export default {
   components: {
     DateDropdown
   },
+  data () {
+    return {
+      selectedDate: '',
+      ...
+    }
+  }
   ...
 }
 ```
@@ -37,6 +45,13 @@ Vue.use(DateDropdown)
 
 new Vue({
 	...
+	data() {
+		return {
+			selectedDate: '',
+			...
+		}
+	}
+	...
 });
 <script>
 ```
@@ -48,32 +63,34 @@ See the demo in the [example](https://github.com/yangirov/vue-date-dropdown/tree
 Setting a default date
 
 ```html
-<date-dropdown default="1995-01-10" />
+<date-dropdown default="1995-01-10" v-model="selectedDate" />
 ```
 
 Setting a min date
 
 ```html
-<date-dropdown min="1960-8-16" />
+<date-dropdown min="1960" v-model="selectedDate" />
 ```
 
 Setting a max date
 
 ```html
-<date-dropdown max="2018-8-16" />
+<date-dropdown max="2018" v-model="selectedDate" />
 ```
 
 Setting a range of dates
 
 ```html
-<date-dropdown min="1960-8-16" max="2017-8-16" />
+<date-dropdown min="1960" max="2017" v-model="selectedDate" />
 ```
 
 Setting Russian names of months
 
 ```html
 <date-dropdown
-  months-names="Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь" />
+	v-model="selectedDate" 
+  months-names="Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь">
+<date-dropdown>
 ```
 
 ## API
