@@ -17,7 +17,7 @@ npm install vue-date-dropdown --save
 ```
 
 ```js
-import DateDropdown from 'vue-date-dropdown
+import DateDropdown from 'vue-date-dropdown'
 
 Vue.use(DateDropdown)
 ```
