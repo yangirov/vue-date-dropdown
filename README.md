@@ -2,6 +2,8 @@
 
 > A Vue date dropdown component
 
+[![npm version](https://badge.fury.io/js/vue-date-dropdown.svg)](https://badge.fury.io/js/vue-date-dropdown)
+
 ![Example](./assets/vue-date-dropdown.gif)
 
 ## Contents

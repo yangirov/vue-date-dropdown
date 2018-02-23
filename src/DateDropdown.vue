@@ -237,6 +237,6 @@
 		border: 1px solid #e0e0e0;
 		border-radius: 3px;
 		padding: 8px;
-		margin: 5px;
+		margin-right: 10px;
 	}
 </style>
