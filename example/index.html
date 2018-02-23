@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue Date Dropdown</title>
+
+	<style>
+		body {
+			font-family: 'Roboto', sans-serif;
+			font-size: 16px;
+		}
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin: 32px 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="app" class="container">
+		<h1>Vue Date Dropdown</h1>
+		<p>You selected: <strong>{{ selectedDate }}</strong></p>
+
+		<date-dropdown 
+			default="1995.01.10" 
+			min="1960" 
+			max="2020"
+			:months-names="months" 
+			v-model="selectedDate">
+		</date-dropdown>
+	</div>
+
+	<script src="../node_modules/vue/dist/vue.js"></script>
+	<script src="../dist/vue-date-dropdown.min.js"></script>
+
+	<script>
+		Vue.use(DateDropdown)
+
+		new Vue({
+			el: '#app',
+			data() {
+				return {
+					selectedDate: '',
+					months: 'Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь'
+				}
+			}
+		});
+	</script>
+</body>
+</html>
