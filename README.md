@@ -22,17 +22,17 @@ yarn add vue-date-dropdown
 import DateDropdown from 'vue-date-dropdown'
 
 export default {
-  ...
-  components: {
-    DateDropdown
-  },
-  data () {
-    return {
-      selectedDate: '',
-      ...
-    }
-  }
-  ...
+	...
+	components: {
+		DateDropdown
+	},
+	data () {
+		return {
+			selectedDate: '',
+			...
+		}
+	}
+	...
 }
 ```
 Or if you are using CDN version
@@ -89,7 +89,7 @@ Setting Russian names of months
 ```html
 <date-dropdown
 	v-model="selectedDate" 
-  months-names="Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь">
+	months-names="Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь">
 <date-dropdown>
 ```
 
