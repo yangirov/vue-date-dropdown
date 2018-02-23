@@ -48,6 +48,7 @@
 	}
 
 	export default {
+		name: "DateDropdown",
 		props: {
 			default: {
 				type: String,
