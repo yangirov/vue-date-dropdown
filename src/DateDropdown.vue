@@ -1,9 +1,9 @@
 <template>
-	<div class="date-dropdown-container">
+	<div :class="[containerClassName]">
 
 		<!-- Day -->
-		<div class="date-dropdown-select-wrapper">
-			<select v-model="selectedDay" class="date-dropdown-select day">
+		<div :class="[selectWrapperClassName]">
+			<select v-model="selectedDay" :class="[selectClassName, selectDayClassName]">
 				<option v-for="day in days" :key="day.day">
 					{{ day.day }}
 				</option>
@@ -11,8 +11,8 @@
 		</div>
 
 		<!-- Month -->
-		<div class="date-dropdown-select-wrapper">
-			<select v-model="selectedMonth" @change="updateDays()" class="date-dropdown-select month">
+		<div :class="[selectWrapperClassName]">
+			<select v-model="selectedMonth" @change="updateDays()" :class="[selectClassName, selectMonthClassName]">
 				<option v-for="(month, index) in months" :value="index" :key="month.month">
 					{{ month.month }}
 				</option>
@@ -20,8 +20,8 @@
 		</div>
 
 		<!-- Year -->
-		<div class="date-dropdown-select-wrapper">
-			<select v-model="selectedYear" @change="updateDays()" class="date-dropdown-select year">
+		<div :class="[selectWrapperClassName]">
+			<select v-model="selectedYear" @change="updateDays()" :class="[selectClassName, selectYearClassName]">
 				<option v-for="year in years" :key="year.year">
 					{{ year.year }}
 				</option>
@@ -65,7 +65,37 @@
 			monthsNames: {
 				type: String,
 				required: false
-			}
+			},
+			selectClassName: {
+				type: String,
+				required: false,
+				default: 'date-dropdown-select'
+			},
+			selectDayClassName: {
+				type: String,
+				required: false,
+				default: 'day'
+			},
+			selectMonthClassName: {
+				type: String,
+				required: false,
+				default: 'month'
+			},
+			selectYearClassName: {
+				type: String,
+				required: false,
+				default: 'year'
+			},
+			selectWrapperClassName: {
+				type: String,
+				required: false,
+				default: 'date-dropdown-select-wrapper'
+			},
+			containerClassName: {
+				type: String,
+				required: false,
+				default: 'date-dropdown-container'
+			},
 		},
 
 		data () {
