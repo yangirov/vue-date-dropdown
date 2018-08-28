@@ -22,7 +22,7 @@
 		<!-- Year -->
 		<div :class="[selectWrapperClassName]">
 			<select v-model="selectedYear" @change="updateDays()" :class="[selectClassName, selectYearClassName]">
-				<option v-for="year in years" :key="year.year" :value="day.day">
+				<option v-for="year in years" :key="year.year" :value="year.year">
 					{{ year.year }}
 				</option>
 			</select>
