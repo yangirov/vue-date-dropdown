@@ -97,9 +97,9 @@
 				default: 'date-dropdown-container'
 			},
 			disabled: {
-				type: string,
+				type: Boolean,
 				required: false,
-				default: null
+				default: false
 			}
 		},
 
