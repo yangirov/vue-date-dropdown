@@ -3,7 +3,7 @@
 
 		<!-- Day -->
 		<div :class="[selectWrapperClassName]">
-			<select v-model="selectedDay" :class="[selectClassName, selectDayClassName]">
+			<select v-model="selectedDay" :class="[selectClassName, selectDayClassName]" :disabled="disabled">
 				<option v-for="day in days" :key="day.day">
 					{{ day.day }}
 				</option>
@@ -12,7 +12,7 @@
 
 		<!-- Month -->
 		<div :class="[selectWrapperClassName]">
-			<select v-model="selectedMonth" @change="updateDays()" :class="[selectClassName, selectMonthClassName]">
+			<select v-model="selectedMonth" @change="updateDays()" :class="[selectClassName, selectMonthClassName]" :disabled="disabled">
 				<option v-for="(month, index) in months" :value="index" :key="month.month">
 					{{ month.month }}
 				</option>
@@ -21,7 +21,7 @@
 
 		<!-- Year -->
 		<div :class="[selectWrapperClassName]">
-			<select v-model="selectedYear" @change="updateDays()" :class="[selectClassName, selectYearClassName]">
+			<select v-model="selectedYear" @change="updateDays()" :class="[selectClassName, selectYearClassName]" :disabled="disabled">
 				<option v-for="year in years" :key="year.year">
 					{{ year.year }}
 				</option>
@@ -96,6 +96,11 @@
 				required: false,
 				default: 'date-dropdown-container'
 			},
+			disabled: {
+				type: string,
+				required: false,
+				default: null
+			}
 		},
 
 		data () {
@@ -103,7 +108,7 @@
 				days: [],
 				selectedDay: '',
 				selectedMonth: '',
-				selectedYear: ''
+				selectedYear: '',
 			}
 		},
 
